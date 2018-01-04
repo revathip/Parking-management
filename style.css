@@ -1,0 +1,18 @@
+.left_container{
+	width: 70%;
+	float:left;
+}
+
+.right_col{
+	float: left;
+	width: 30%;
+}
+.clear{
+	clear: both;
+}
+.success{
+	color: green;
+}
+.unpark{
+	color: blue;
+}
