@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Car Garage Management</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+	<script src="app.js"/></script>
+  </head>
+  <body ng-app="carApp">
+  <div ng-controller = "parkCtrl">
+  <div class="left_container">
+	<form>
+		<input type="text" ng-model="car_number" required/><br/><br/>
+		<input type="text" ng-model="p_name" required/><br/><br/>
+		<button ng-click="park_car()">Park</button><br/><br/>
+		<div ng-show="show_success"><b class="success">Car parked successfully</b></div>
+	</form>
+	
+	</div>
+		
+	<div class="right_col">
+	<h1>Status</h1>
+	Total: 5 <br/>
+	Occupied:<span ng-bind="occupied"></span> <br/>
+	Available:{{5 - occupied}}
+	</div>
+	<div class="clear"></div>
+	<hr/>
+	Car number: <input type="text" ng-model="unpark_number" /> <button ng-click="remove_car()"> Unpark</button>
+	
+<div ng-show="unpark_success"><b class="unpark">Car Unparked successfully</b></div>
+</div>
+  </body>
+  </html>
